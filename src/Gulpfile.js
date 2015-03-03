@@ -100,13 +100,19 @@ gulp.task('styles', function () {
     .pipe( gulp.dest( cfg.dist.root ))
 });
 
-// scripts compiling
-gulp.task('scripts', function () {
-  return gulp.src( cfg.src.scripts )
+// scripts linting
+gulp.task('scripts:lint', function () {
+  return gulp.src( cfg.src.scripts_lint )
+    .pipe( plumber() )
+      .pipe( jshint( cfg.project.jshint ))
+      .pipe( jshint.reporter( 'jshint-stylish' ) );
+});
+
+// scripts building
+gulp.task('scripts:build', function () {
+  return gulp.src( cfg.src.scripts_build )
     .pipe( plumber() )
       .pipe( include() )
-      .pipe( jshint( cfg.project.jshint ))
-      .pipe( jshint.reporter( 'jshint-stylish' ) )
     .pipe( rename({ suffix:'.min' }) )
       .pipe( uglify() )
     .pipe( gulp.dest( cfg.dist.root ));
@@ -124,15 +130,15 @@ gulp.task('images', function () {
 // watch the files
 gulp.task('watch', function () {
   gulp.watch(cfg.watch.styles,  ['styles' , browser_sync.reload]);
-  gulp.watch(cfg.watch.scripts, ['scripts', browser_sync.reload]);
+  gulp.watch(cfg.watch.scripts, ['scripts:lint', 'scripts:build', browser_sync.reload]);
   gulp.watch(cfg.watch.images,  ['images' , browser_sync.reload]);
   gulp.watch(cfg.watch.content, ['bs:reload']);
 });
 
 //groups
-gulp.task('all', [ 'styles', 'utils:fonts', 'scripts', 'images' ])
+gulp.task('all', [ 'styles', 'utils:fonts', 'scripts:build', 'images' ]);
 gulp.task('build', [ 'all', 'utils:build:version' ]);
-gulp.task('serve', [ 'all', 'bs:start', 'watch' ])
+gulp.task('serve', [ 'all', 'bs:start', 'watch' ]);
 
 //default
 gulp.task('default', ['serve']);
