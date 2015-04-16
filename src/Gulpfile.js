@@ -43,8 +43,9 @@ var gulp = require('gulp'),
       src: {
         images: 'images/**/*.?(jpg|jpeg|png|gif|svg)',
         styles: 'styles/*.?(scss|css)',
-        scripts: ['scripts/*.js', '!scripts/_*.js'], // exclude _*.js files
+        scripts_lint: ['scripts/*.js', 'scripts/libs/*.js'], // lint all scripts
         scripts_vendor: 'scripts/vendor/*.js', // minified 'copy only' vendor files
+        scripts_build: ['scripts/*.js', '!scripts/_*.js'], // exclude _*.js files
         fonts: 'styles/fonts/*.*'
       },
       watch: {
