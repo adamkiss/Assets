@@ -2,7 +2,7 @@
 
 My very own setup for most of front-end/designy stuff I work on.
 
-Latest version: 05.11.2014
+Latest version: See changelog  
 License: What? If it helped, you're welcome. Use what you want.
 
 ## The story
@@ -13,14 +13,26 @@ I need it again, because my workflow ~~sucks~~ sucked. I just (5.11.2014) finish
 
 ## Changelog
 
-**03-03-2015**
-Moved this project over from StarterKit, since the StarterKit is mostly abandoned at this point (the Assets were the only used part). Also, I split the scripts build and scripts linting into separate Gulp tasks, so I can lint separate files before they get pulled together into one file.
+**17-04-2015**
+- fixed some stuff in the readme
+- added `.gitignore` and removed all the stupid `.DS_Store` files
+- put back `src/styles/libs` folder, which mysteriously disappeared (I deleted it)
 
-**24-02-2015**
-Removed Bourbon/Neat, replaced it with the Include Media and stole Clearfix from Bourbon. Simplified screen.css (added Category headings for future references). Removed unneeded `lib/_libs.scss` (four library files used, remember?).
+**03-03-2015**  
+- moved this project over from StarterKit (since that is abandoned at this point)
+- split `scripts` into `scripts:build` and `scripts:lint` (linting separate files)
 
-**11-05-2014**
-Finally, removed all old shit, and replaced it with my new shiny Gulpfile! Woohoo.
+**24-02-2015**  
+- Removed Bourbon/Neat
+- replaced it with the Include Media 
+- stole Clearfix from Bourbon
+- Simplified screen.css (added Category headings for future references).
+- Removed unneeded `lib/_libs.scss` (four library files used, remember?).
+  - This probably also removed `libs` folder. I am an idiot.
+
+**11-05-2014**  
+- Finally, removed all old shit, and replaced it with my new shiny Gulpfile! Woohoo.
+- Gulp
 
 ## Notes
 
