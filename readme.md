@@ -13,6 +13,9 @@ I need it again, because my workflow ~~sucks~~ sucked. I just (5.11.2014) finish
 
 ## Changelog
 
+**26-04-2015**
+- Added `gulp-shell` and running MAMP by default
+
 **17-04-2015**
 - fixed some stuff in the readme
 - added `.gitignore` and removed all the stupid `.DS_Store` files
