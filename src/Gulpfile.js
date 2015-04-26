@@ -4,6 +4,7 @@
 var gulp = require('gulp'),
     // utils
     plumber = require('gulp-plumber'),
+    shell = require('gulp-shell'),
     rename = require('gulp-rename'),
     fs = require('fs'),
     moment = require('moment'),
@@ -87,6 +88,11 @@ gulp.task('utils:build:version', function () {
   });
 });
 
+// Open MAMP (Basically: make sure MAMP is running)
+gulp.task('utils:mamp', , shell.task([
+  'open /Applications/MAMP\\ PRO/MAMP\\ PRO.app'
+]));
+
 // styles (sass) compiling
 gulp.task('styles', function () {
   return gulp.src( cfg.src.styles )
@@ -139,7 +145,7 @@ gulp.task('watch', function () {
 //groups
 gulp.task('all', [ 'styles', 'utils:fonts', 'scripts:build', 'images' ]);
 gulp.task('build', [ 'all', 'utils:build:version' ]);
-gulp.task('serve', [ 'all', 'bs:start', 'watch' ]);
+gulp.task('serve', [ 'all', 'utils:mamp', 'bs:start', 'watch' ]);
 
 //default
 gulp.task('default', ['serve']);

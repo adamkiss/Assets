@@ -6,6 +6,7 @@
 dependencies=(
   gulp
   gulp-plumber
+  gulp-shell
   gulp-rename
   moment
   gulp-changed
