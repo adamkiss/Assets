@@ -1,9 +1,9 @@
 // Clearfix used from Bourbon: http://bourbon.io
+// @link https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/library/_clearfix.scss
 //
 // Modern micro clearfix provides an easy way to contain floats without adding additional markup.
 //
-// Example usage:
-//
+//    EXAMPLE USAGE
 //    // Contain all floats within .wrapper
 //    .wrapper {
 //      @include clearfix;
@@ -14,12 +14,9 @@
 //    }
 
 @mixin clearfix {
-  &:after {
-    content:"";
-    display:table;
-    clear:both;
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
   }
 }
-
-// Acknowledgements
-// Beat *that* clearfix: [Thierry Koblentz](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
