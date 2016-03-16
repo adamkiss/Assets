@@ -2,7 +2,7 @@
 
 My very own setup for most of front-end/designy stuff I work on.
 
-Latest version: See changelog  
+Latest version: See [changelog](#changelog)  
 License: What? If it helped, you're welcome. Use what you want.
 
 ## The story
@@ -15,7 +15,7 @@ And then I rewrote it again. Everything about Gulping the source is gone; now it
 
 ## Changelog
 
-**25-03-2016**
+**15-03-2016**
 - Completely changed this repo;
   - no `Gulp`, `src`, `dest`, nothing
   - just my default source tree with styles and scripts
