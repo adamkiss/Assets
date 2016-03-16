@@ -1,13 +1,14 @@
 //
 // @Include MQ
-// Extension of include-media for screen only media queries
+// Extension of include-media for screen only media queries (and simpler stuff)
 //
 // @author: Adam Kiss <adamkiss.com>
+// @version: 1.4.1
 
 @mixin mq($conditions...) {
-
-  @include media( join("screen", $conditions)... ) {
-    @content;
+  @media screen {
+    @include media($conditions...) {
+      @content;
+    }
   }
-
 }
