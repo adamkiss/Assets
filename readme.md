@@ -5,6 +5,17 @@ My very own setup for most of front-end/designy stuff I work on.
 Latest version: See [changelog](#changelog)  
 License: What? If it helped, you're welcome. Use what you want.
 
+## What's included
+- styles:
+  - **[Normalize.css](github.com/necolas/normalize.css) v3.0.3** (16-03-2016)
+  - **[Micro clearfix hack](https://github.com/thoughtbot/bourbon/blob/master/core/bourbon/library/_clearfix.scss)** (16-03-2016)
+  - **[Include Media (+mq)](http://include-media.com) v1.4.2** (16-03-2016)
+
+- scripts:
+  - **[jQuery](http://jquery.com/download/#jquery-2-x) v2.2.1** (16-03-2016)
+  - **[modernizr](http://modernizr.com/download/?-adownload-backdropfilter-canvas-canvastext-cookies-cors-cssanimations-csstransforms-csstransitions-cssvhunit-cssvwunit-emoji-hashchange-history-inlinesvg-input-inputtypes-matchmedia-queryselector-srcset-svg-svgasimg-svgclippaths-svgfilters-touchevents-video-setclasses) v3.3.1-custom** (16-03-2016)
+  - **[Enquire.js](http://wicky.nillia.ms/enquire.js) v2.1.2** (16-03-2016)
+
 ## The story
 
 We started this repository with [Matej](http://hrescak.com/) some time in 2012, because of the very same reasons why it exists right now, but then it kind of died, because we moved on to other languages and other jobs as well.
@@ -14,6 +25,10 @@ I then rewrote it completely to Gulp.js, added image optimization and javascript
 And then I rewrote it again. Everything about Gulping the source is gone; now it's just the source folder of my assets, with default tree, styles and scripts.
 
 ## Changelog
+
+**16-03-2016**
+- updated stylesheets: `Include Media (+MQ)`, `Clearfix`
+- included javascript: `jQuery`, `Modernizr`, `Enquire.js`
 
 **15-03-2016**
 - Completely changed this repo;
