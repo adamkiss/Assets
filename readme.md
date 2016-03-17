@@ -15,6 +15,7 @@ License: What? If it helped, you're welcome. Use what you want.
   - **[jQuery](http://jquery.com/download/#jquery-2-x) v2.2.1** (16-03-2016)
   - **[modernizr](http://modernizr.com/download/?-adownload-backdropfilter-canvas-canvastext-cookies-cors-cssanimations-csstransforms-csstransitions-cssvhunit-cssvwunit-emoji-hashchange-history-inlinesvg-input-inputtypes-matchmedia-queryselector-srcset-svg-svgasimg-svgclippaths-svgfilters-touchevents-video-setclasses) v3.3.1-custom** (16-03-2016)
   - **[Enquire.js](http://wicky.nillia.ms/enquire.js) v2.1.2** (16-03-2016)
+  - **[Fastclick](https://github.com/ftlabs/fastclick) v1.0.6** (17-03-2016)
 
 ## The story
 
@@ -25,6 +26,9 @@ I then rewrote it completely to Gulp.js, added image optimization and javascript
 And then I rewrote it again. Everything about Gulping the source is gone; now it's just the source folder of my assets, with default tree, styles and scripts.
 
 ## Changelog
+
+**17-03-2016**
+- libs: add `fastclick` (and activate by default)
 
 **16-03-2016**
 - updated stylesheets: `Include Media (+MQ)`, `Clearfix`
